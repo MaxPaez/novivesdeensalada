@@ -1,0 +1,19 @@
+{
+  "name": "novivesdeensalada",
+  "version": "1.0.0",
+  "description": "ecommerce de alimentación vegana",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaxPaez/novivesdeensalada.git"
+  },
+  "author": "Paez Maximiliano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaxPaez/novivesdeensalada/issues"
+  },
+  "homepage": "https://github.com/MaxPaez/novivesdeensalada#readme"
+}

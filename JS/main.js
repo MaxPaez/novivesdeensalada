@@ -11,6 +11,7 @@ const fragment = document.createDocumentFragment();
 
 
 
+//FUNCIÓN ASINCRÓNICA CON LA CUAL TOMAR LOS PRODUCTOS DE LAS DISTINTAS CATEGORÍAS DE LOS JSON
 const getProducts = async (url, container) => {
 
     try {
@@ -30,9 +31,10 @@ const getProducts = async (url, container) => {
 }
 
 
+
 // PARA AGREGAR LOS PRODUCTOS AL DOM
 const loadProducts = (products, container) => {
-
+    
     Object.values(products).forEach(producto => {
 
         templateProd.querySelector('.nombre-prod').textContent = producto.nombre;
@@ -46,7 +48,7 @@ const loadProducts = (products, container) => {
         const clone = templateProd.cloneNode(true);
 
         fragment.appendChild(clone);
-
+        
     })
     container.appendChild(fragment);
 }
@@ -61,6 +63,27 @@ getProducts("/data/guarnicion.json", contenedorProdGuarnicion)
 //SECCIÓN BEBIDAS
 getProducts("/data/bebida.json", contenedorProdBebidas)
 
+
+
+//NOTIFICACIÓN AL AGREGAR UN PRODUCTO AL CARRITO CON TOASTIFY
+const cartelAlAgregar = (contenedor) => {
+
+    contenedor.addEventListener('click', (e) => {
+        Toastify({    
+            text: "Has agregado un producto al carrito",
+            duration: 2000,
+            gravity: "bottom",
+            positin: "right",
+            style: {
+            background: "hsla(250, 70%, 50%, 0.7)"}
+
+        }).showToast();
+    })
+}
+
+cartelAlAgregar(contenedorProdPrincipal)
+cartelAlAgregar(contenedorProdGuarnicion)
+cartelAlAgregar(contenedorProdBebidas)
 
 
 
@@ -81,6 +104,8 @@ let carritoStorage = window.localStorage;
 
 
 
+
+
 //BOTON PARA AGREGAR PRODUCTOS DE LAS DISTINTAS CATEGORÍAS AL CARRITO
 contenedorProdPrincipal.addEventListener('click', e => {
 
@@ -88,27 +113,28 @@ contenedorProdPrincipal.addEventListener('click', e => {
     if (e.target.textContent === "Agregar") {
 
         setCarrito(e.target.parentElement.parentElement);
-
+                
     }
-
+    
     e.stopPropagation();
-
+    
 })
 
 
-contenedorProdGuarnicion.addEventListener('click', e => {
 
+
+contenedorProdGuarnicion.addEventListener('click', e => {
+    
     //OPERADOR LÓGICO AND
     if (e.target.textContent === "Agregar") {
-
+        
         setCarrito(e.target.parentElement.parentElement)
-
+        
     }
-
+    
     e.stopPropagation();
 
-});
-
+})
 
 contenedorProdBebidas.addEventListener('click', e => {
 
