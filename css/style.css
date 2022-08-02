@@ -31,7 +31,7 @@ h2 {
 
 .tabla-calculo, .tabla-calculo-ticket {
     display: flex;
-    justify-content: center;
+    justify-content: center;    
 }
 
 .tabla-calculo-ticket {
@@ -46,6 +46,7 @@ h2 {
     margin-bottom: 2rem;
     empty-cells: hide;
     border-radius: 10px;
+    max-width: 50rem;
 }
 
 .titulo-tabla {
@@ -98,6 +99,7 @@ tr {
     border-radius: 10px;
     text-align: center;
     padding: 0.4rem 0;
+    max-width: 40rem;
 }
 
 
