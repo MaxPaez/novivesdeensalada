@@ -1,0 +1,53 @@
+{
+
+    "producto1": {
+        
+        "nombre": "Brochetas",
+        
+        "precio": 350,
+        
+        "srcImg": "https://static.guiainfantil.com/media/4692/c/brochetas-de-verduras-entrante-sano-y-rapido-lg.jpg"
+        
+    },
+
+    "producto2": {
+        
+        "nombre": "Hamburguesa Veggy",
+        
+        "precio": 640,
+        
+        "srcImg": "https://easyrecetas.com/wp-content/uploads/2020/05/Receta-de-Hamburguesas-Vegetarianas.jpg"
+        
+    },
+
+    "producto3": {
+        
+        "nombre": "Pizza Hongos",
+        
+        "precio": 720,
+        
+        "srcImg": "https://static.guiainfantil.com/pictures/recetas/4797-pizza-vegetal-de-champinones-y-esparragos-trigueros.jpg"
+        
+    },
+
+    "producto4": {
+        
+        "nombre": "Tacos de Verdura",
+        
+        "precio": 680,
+        
+        "srcImg": "https://www.antojoentucocina.com/wp-content/uploads/2020/11/tacos-1-scaled.jpg"
+        
+    },
+
+    "producto5": {
+        
+        "nombre": "Wrap Huerta Mix",
+        
+        "precio": 420,
+        
+        "srcImg": "https://img.freepik.com/foto-gratis/wrap-tortilla-vegana-rollo-verduras-asadas-comida-vegetariana-pan-plano_72932-1005.jpg?w=2000"
+        
+    }
+
+}

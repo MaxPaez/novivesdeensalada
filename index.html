@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>No Vives de Ensalada</title>
+</head>
+
+<body>
+
+    <div class="divMain">
+
+        <h1>No Vives de Ensalada</h1>
+
+    </div>
+
+    
+    <!-- TARJETAS DE PRODUCTOS CON JAVASCRIPT -->
+    <div>
+
+        <h2>Plato Principal</h2>
+
+        <div class="contenedor-productosPrincipal">
+            
+        </div>
+
+    </div>
+
+    <div>
+
+        <h2>Guarnición</p>
+
+        <div class="contenedor-productosGuarnicion">
+
+        </div>
+
+    </div>
+    
+    <div>
+
+        <h2>Bebidas</p>
+
+        <div class="contenedor-productosBebidas">
+
+        </div>
+
+    </div>
+
+
+    <!-- TEMPLATE DEL PRODUCTO -->
+    <template id="template-prod">
+
+        <article class="tarjeta">
+
+
+            <!-- IMAGEN DEL PRODUCTO -->
+            <div class="contenedor-img">
+
+                <img src="" alt="">
+
+            </div>
+
+
+            <!-- NOMBRE DEL PRODUCTO -->
+            <div class="div-info">
+                
+                <h3 class="nombre-prod">Nombre Producto</h3>
+                
+            </div>
+
+
+            <!-- PRECIO Y AGREGAR AL CARRITO -->
+            <div class="div-precio-boton">
+
+                <p class="precio">precio Producto</p>
+
+                <button class="boton">Agregar</button>
+
+            </div>
+
+        </article>
+
+    </template>
+
+
+
+    <!-- TABLA - PRODUCTOS DEL CARRITO -->
+    <div class="tabla-calculo" id="tabla-calculo">
+
+        <table class="tabla">
+
+            <caption class="titulo-tabla">Productos en el carrito</caption>
+
+            <thead class="cabecera border-top-right">
+
+                <tr>
+
+                    <th class="border-top-left">Nombre Producto</th>
+
+                    <th>Cantidad</th>
+
+                    <th>Precio Unitario</th>
+
+                    <th class="border-top-right">Precio Total</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="carrito-body">
+
+            </tbody>
+
+            <tfoot id="footer">
+
+                <tr>
+
+
+                </tr>
+
+            </tfoot>
+
+        </table>
+
+    </div>
+
+
+    <!-- TEMPLATE DE LAS FILAS -->
+    <template id="agregar-producto-al-carro">
+
+        <tr>
+            <td id="producto"></td>
+
+            <td>
+
+                <button id="menos-cantidad" class="button">-</button>
+
+                <span id="cant"></span>
+
+                <button id='mas-cantidad' class="button">+</button>
+
+            </td>
+            
+            <td class="precio-tabla" id="precio-uni"></td>
+
+            <td class="precio-tabla" id="precio-total-prod"></td>
+        </tr>
+
+    </template>
+
+    
+    <!-- TEMPLATE DEL FOOTER DE LA TABLA -->
+    <template id="tfooter">
+
+        <tr class="none">
+
+            <td colspan=2 class="border-bottom-left">
+
+                <button id="vaciar-tabla" class="button">Vaciar carrito</button>
+
+            </td>
+
+            <td class="negrita">Precio Total</td>
+
+            <td id="total-a-pagar" class="precio-tabla border-bottom-right negrita"></td>
+
+        </tr>
+
+
+        <!-- TEMPLATE DEL BOTÓN DE PAGO -->
+        <tr class="none">
+
+            <td colspan=4 class="border-bottom">
+
+                <button id="pagarCompra" class="buttonPay">Realizar Pago</button>
+
+            </td>
+
+        </tr>
+
+    </template>
+
+    
+    <!-- SCRPITS -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

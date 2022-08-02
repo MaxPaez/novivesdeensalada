@@ -1,0 +1,43 @@
+{
+
+    "producto11": {
+
+        "nombre": "Exprimido Naranja",
+
+        "precio": 250,
+
+        "srcImg": "https://recetasdebatidos.com/wp-content/uploads/2021/03/%C2%BFPara-que%CC%81-es-bueno-el-zumo-o-jugo-de-naranja-natural-Beneficios.jpeg"
+
+    },
+
+    "producto12": {
+
+        "nombre": "Vaso de Gaseosa",
+
+        "precio": 280,
+
+        "srcImg": "https://peru21.pe/resizer/xDGh2nl1iktCb3wgYcyfv66AqZM=/580x330/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/2P55I5JRMJBZPDJKHGP423JQHU.jpg"
+
+    },
+
+    "producto13": {
+
+        "nombre": "Cerveza Tirada",
+
+        "precio": 320,
+
+        "srcImg": "https://www.lavanguardia.com/files/image_948_465/uploads/2020/07/13/5f0c78598c987.jpeg"
+
+    },
+
+    "producto14": {
+
+        "nombre": "Copa de Vino",
+
+        "precio": 380,
+
+        "srcImg": "https://mui.today/__export/1587321669922/sites/mui/img/2020/04/19/detrxs-de-un-vino-tinto-hay-un-proceso-de-elaboracixn.jpg_1226039270.jpg"
+        
+    }
+
+}

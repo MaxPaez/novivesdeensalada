@@ -1,0 +1,53 @@
+{
+
+    "producto6": {
+        
+        "nombre": "Berenjenas Asadas",
+        
+        "precio": 250,
+        
+        "srcImg": "https://i.pinimg.com/564x/6d/0c/6d/6d0c6d8c23da8859156c76616fd58814--tapas.jpg"
+        
+    },
+
+    "producto7": {
+        
+        "nombre": "Papas Fritas",
+        
+        "precio": 350,
+        
+        "srcImg": "https://i.blogs.es/f9cf25/degustacion-patatas/450_1000.jpg"
+        
+    },
+
+    "producto8": {
+        
+        "nombre": "Ensalada Cesar Veggy",
+        
+        "precio": 300,
+        
+        "srcImg": "https://danzadefogones.com/wp-content/uploads/2015/01/Ensalada-Cesar-vegana-danzadefogones.com-2-2.jpg"
+        
+    },
+
+    "producto9": {
+        
+        "nombre": "Ensalada & Pasta",
+        
+        "precio": 380,
+        
+        "srcImg": "https://unareceta.com/wp-content/uploads/2017/05/ensalada-de-pasta-vegetariana.jpg"
+        
+    },
+
+    "producto10": {
+        
+        "nombre": "Mix Verduras Asadas",
+        
+        "precio": 330,
+        
+        "srcImg": "https://assets.unileversolutions.com/recipes-v2/37790.jpg"
+        
+    }
+
+}
