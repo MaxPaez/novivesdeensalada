@@ -306,7 +306,33 @@ const pintarFooter = () => {
 
             localStorage.setItem('sumaTotal', total);
 
-            location.href = "/html/finalizarCompra.html";
+            // location.href = "/html/finalizarCompra.html";
+
+            Swal.fire({
+
+                title: '¿Has terminado tu compra?',
+                text: "No podrás agregar más productos al carrito",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: 'rgb(92, 206, 39)',
+                cancelButtonColor: 'hsla(250, 70%, 50%, 0.7)',
+                confirmButtonText: 'Si, terminé mi compra',
+                cancelButtonText: 'Quiero seguir comprando',
+
+            }).then((result) => {
+
+                if (result.isConfirmed) {
+
+                    Swal.fire(
+                        'Borrado',
+                        'Tu carrito ha quedado vacío',
+                        'success'
+                    )
+
+                    location.href = "/html/finalizarCompra.html";
+
+                }
+            })
 
         });
 

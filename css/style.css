@@ -146,10 +146,17 @@ td {
 }
 
 .buttonPay {
+    color: black;
     background: rgb(92, 206, 39);
     padding: 8px 20px;
     font-size: 16px;
     font-weight: 600;
+}
+
+.buttonPay:hover{
+    color: rgba(255, 255, 255, 0.8);
+    background: hsla(250, 70%, 50%, 0.7);
+    box-shadow: 1px 1px 3px hsl(0, 100%, 0%, 0.25);
 }
 
 .negrita {
@@ -231,7 +238,7 @@ img {
     cursor: pointer;
     border: var(--border);
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 600;
     width: 100px;
     display: flex;
     text-align: center;
@@ -242,7 +249,7 @@ img {
 
 .boton:hover {
     color: rgba(255, 255, 255, 0.8);
-    background: hsla(210, 40%, 50%, 1);
+    background: hsla(250, 70%, 50%, 0.7);
     box-shadow: 1px 1px 3px hsl(0, 100%, 0%, 0.25);
 }
 
