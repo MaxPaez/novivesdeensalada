@@ -4,7 +4,8 @@ body {
     font-family: Optima, sans-serif;
     --border: 1px solid hsla(240, 25%, 50%, 0.3);
     --border-table: 1px solid hsla(240, 25%, 50%, 01);
-    background: rgb(75, 123, 52);
+    background: rgb(92,206,39);
+background: linear-gradient(90deg, rgba(92,206,39,1) 0%, rgba(43,125,66,1) 61%);
 }
 
 .divMain{
@@ -13,7 +14,8 @@ body {
 }
 
 h1 {
-    font-size: 55px;
+    font-family: 'Caveat', cursive;
+    font-size: 80px;
     text-align: center;
     color: rgb(92, 206, 39);
     margin: 2rem;
@@ -275,6 +277,10 @@ img {
 .celdaProdTicket {
     font-size: 18px;
     font-weight: 600;
+}
+
+.tablaTicket .tabla {
+    box-shadow: 0 0 2rem hsla(240, 7%, 3%, 0.5);
 }
 
 
