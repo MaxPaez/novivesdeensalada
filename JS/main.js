@@ -322,14 +322,12 @@ const pintarFooter = () => {
             }).then((result) => {
 
                 if (result.isConfirmed) {
+                    
+                    Swal.fire({
 
-                    Swal.fire(
-                        'Borrado',
-                        'Tu carrito ha quedado vacío',
-                        'success'
-                    )
-
-                    location.href = "/html/finalizarCompra.html";
+                        text: 'Esperamos que disfrutes tu comida',
+                        
+                    })
 
                 }
             })
@@ -337,7 +335,6 @@ const pintarFooter = () => {
         });
 
     }
-
 }
 
 
