@@ -34,7 +34,7 @@ const getProducts = async (url, container) => {
 
 // PARA AGREGAR LOS PRODUCTOS AL DOM
 const loadProducts = (products, container) => {
-    
+
     Object.values(products).forEach(producto => {
 
         templateProd.querySelector('.nombre-prod').textContent = producto.nombre;
@@ -48,7 +48,7 @@ const loadProducts = (products, container) => {
         const clone = templateProd.cloneNode(true);
 
         fragment.appendChild(clone);
-        
+
     })
     container.appendChild(fragment);
 }
@@ -67,23 +67,31 @@ getProducts("/data/bebida.json", contenedorProdBebidas)
 
 //NOTIFICACIÓN AL AGREGAR UN PRODUCTO AL CARRITO CON TOASTIFY
 const cartelAlAgregar = (contenedor) => {
+    
 
     contenedor.addEventListener('click', (e) => {
-        Toastify({    
-            text: "Has agregado un producto al carrito",
-            duration: 2000,
-            gravity: "bottom",
-            positin: "right",
-            style: {
-            background: "hsla(250, 70%, 50%, 0.7)"}
 
-        }).showToast();
+        if (e.target.classList.contains('boton')) {
+
+            Toastify({
+                text: "Has agregado un producto al carrito",
+                duration: 2000,
+                gravity: "bottom",
+                positin: "right",
+                style: {
+                    background: "hsla(250, 70%, 50%, 0.7)"
+                }
+                
+            }).showToast();
+        }
     })
 }
 
-cartelAlAgregar(contenedorProdPrincipal)
-cartelAlAgregar(contenedorProdGuarnicion)
-cartelAlAgregar(contenedorProdBebidas)
+// cartelAlAgregar(contenedorProdPrincipal)
+cartelAlAgregar(contenedorProdPrincipal);
+cartelAlAgregar(contenedorProdGuarnicion);
+cartelAlAgregar(contenedorProdBebidas);
+
 
 
 
@@ -113,25 +121,22 @@ contenedorProdPrincipal.addEventListener('click', e => {
     if (e.target.textContent === "Agregar") {
 
         setCarrito(e.target.parentElement.parentElement);
-                
+
     }
-    
+
     e.stopPropagation();
-    
+
 })
 
-
-
-
 contenedorProdGuarnicion.addEventListener('click', e => {
-    
+
     //OPERADOR LÓGICO AND
     if (e.target.textContent === "Agregar") {
-        
+
         setCarrito(e.target.parentElement.parentElement)
-        
+
     }
-    
+
     e.stopPropagation();
 
 })
@@ -280,9 +285,11 @@ const pintarFooter = () => {
                 if (result.isConfirmed) {
 
                     Swal.fire(
+
                         'Borrado',
                         'Tu carrito ha quedado vacío',
                         'success'
+
                     )
 
                     carrito = {};
@@ -306,8 +313,6 @@ const pintarFooter = () => {
 
             localStorage.setItem('sumaTotal', total);
 
-            // location.href = "/html/finalizarCompra.html";
-
             Swal.fire({
 
                 title: '¿Has terminado tu compra?',
@@ -322,15 +327,29 @@ const pintarFooter = () => {
             }).then((result) => {
 
                 if (result.isConfirmed) {
-                    
+
                     Swal.fire({
 
                         text: 'Esperamos que disfrutes tu comida',
-                        
+                        confirmButtonColor: 'hsla(250, 70%, 50%, 0.7)',
+                        confirmButtonText: 'Ok',
+
                     })
+                        .then((result) => {
+
+
+                            if (result) {
+
+                                window.location.href = "/html/finalizarCompra.html";
+
+                            }
+
+                        })
 
                 }
-            })
+            }
+
+            )
 
         });
 
